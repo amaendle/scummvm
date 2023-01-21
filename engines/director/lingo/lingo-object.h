@@ -133,7 +133,7 @@ public:
 
 	Symbol getMethod(const Common::String &methodName) override {
 		if (_disposed) {
-			error("Method '%s' called on disposed object <%s>", methodName.c_str(), asString().c_str());
+			warning("Method '%s' called on disposed object <%s>", methodName.c_str(), asString().c_str());
 		}
 
 		Common::String methodId;
